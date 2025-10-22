@@ -1,0 +1,2 @@
+# Required dependencies for Habit Tracker project
+pytest>=7.0
