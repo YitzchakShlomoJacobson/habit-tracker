@@ -1,84 +1,139 @@
-# 🧩 Habit Tracker Backend
+🧩 Habit Tracker Backend (Python Project)
 
-A simple **Python backend** for tracking and analyzing daily and weekly habits.
+A clean, modular Python backend for tracking and analyzing daily and weekly habits.
+Built using Object-Oriented Programming (OOP) and Functional Programming (FP) principles.
 
-Users can:
-- Create new habits
-- Mark completions
-- See current streaks
-- Analyze longest streaks
-- Load 5 predefined example habits (fixtures)
+🌟 Key Features
 
----
+✅ Create and manage daily or weekly habits
+✅ Track completions (“check-offs”) and streaks
+✅ Analyze performance with pure functional analytics
+✅ Persist data using SQLite3
+✅ Access everything from a simple Command Line Interface (CLI)
+✅ Includes 5 predefined habits and 4 weeks of example tracking data
+✅ Comprehensive unit tests with pytest
 
-## ⚙️ Installation
+⚙️ Installation Guide
+🧰 Requirements
 
-### Requirements
-- Python **3.7 or higher**
-- pip (Python package manager)
-
-### Steps
-
-Open your terminal (or VS Code terminal) and run:
-
-```bash
-cd Desktop/Object-Oriented-and-Functional-Programming-project-legit
-
-# Create a virtual environment
-python -m venv venv
-
-# Activate it
-# 🪟 Windows:
-venv\Scripts\activate
-# 🍎 macOS / 🐧 Linux:
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-▶️ Usage
-1️⃣ Load example habits
-bash
-python cli.py init-fixtures
-2️⃣ List your habits
-bash
-python cli.py list
-3️⃣ Create a new habit
-bash
-python cli.py create --name "Workout" --period daily
-4️⃣ Complete a habit
-bash
-python cli.py complete --name "Workout"
-5️⃣ View longest streak
-bash
-python cli.py streak
-🧪 Run Tests
-bash
-pytest
-This runs the automated test suite to verify everything works correctly.
-
-🧠 Technologies Used
 Python 3.7+
 
-SQLite3 for storage
+pip package manager
 
-argparse for CLI
+(optional) Virtual environment tool such as venv or conda
 
-pytest for testing
+🧩 Setup Instructions
 
-OOP + Functional Programming
+1️⃣ Clone the repository
 
-📦 Folder Structure
-pgsql
-Object-Oriented-and-Functional-Programming-project-legit/
+git clone https://github.com/YitzchakShlomoJacobson/habit-tracker.git
+cd habit-tracker
+
+
+2️⃣ Create and activate a virtual environment
+
+python -m venv venv
+venv\Scripts\activate  # Windows
+# or
+source venv/bin/activate  # macOS/Linux
+
+
+3️⃣ Install dependencies
+
+pip install -r requirements.txt
+
+▶️ Usage Instructions
+Initialize predefined example habits
+python cli.py init-fixtures
+
+List all habits
+python cli.py list
+
+Create a new habit
+python cli.py create --name "Workout" --period daily
+
+Mark a habit as completed
+python cli.py complete --name "Workout"
+
+View the longest streak across all habits
+python cli.py streak
+
+🧪 Running Unit Tests
+
+Ensure everything works correctly:
+
+pytest
+
+
+All tests are located in the tests/ directory and validate habit logic, streak calculation, and data persistence.
+
+🧠 Design & Architecture
+
+This project combines Object-Oriented and Functional programming principles:
+
+🏗️ Object-Oriented Components
+
+Habit Class: represents a single habit, its periodicity, and completion events.
+
+HabitManager: manages multiple habits, integrates storage and CLI interactions.
+
+Storage: provides persistent data handling with SQLite3.
+
+🧮 Functional Components
+
+Analytics functions are written in a functional style:
+
+list_all_habits()
+
+list_by_periodicity()
+
+longest_streak_for()
+
+longest_streak_all()
+
+🗂️ Folder Structure
+habit-tracker/
 │
-├── habit.py
-├── storage.py
-├── manager.py
-├── analytics.py
-├── fixtures.py
-├── cli.py
-├── requirements.txt
-├── README.md
+├── analytics.py        # FP analytics module
+├── cli.py              # Command-line interface
+├── fixtures.py         # Predefined sample data
+├── habit.py            # Core Habit class
+├── manager.py          # Habit management logic
+├── storage.py          # SQLite3 persistence
+├── requirements.txt    # Dependencies
+├── README.md           # Project documentation
 └── tests/
-    └── test_habit.py
-✨ Developed with care — simple, clean, and extensible.
+    └── test_habit.py   # Unit tests
+
+💡 Technologies Used
+
+Python 3.7+
+
+SQLite3
+
+argparse
+
+pytest
+
+Functional Programming (FP)
+
+Object-Oriented Programming (OOP)
+
+🏁 Project Summary
+
+This Habit Tracker backend was developed to demonstrate strong programming structure and modular design.
+It fulfills all project acceptance criteria, providing:
+
+Reliable tracking of habits and streaks
+
+Clean and maintainable codebase
+
+Analytical insights using functional programming
+
+👨‍💻 Author
+
+Yitzchak Shlomo Jacobson
+📧 yitzchak-shlomo.jacobson@iu-study.org
+
+🗓️ 2025
+📍 Built for IU Object-Oriented & Functional Programming Portfolio Project
